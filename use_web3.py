@@ -28,7 +28,6 @@ def use_1():
 	response = session.post("http://localhost:7545", json=payload,headers=headers)
 	print("response is {}".format(response.json()))
 
-
 def use_2():
 	myAccount = w3.eth.account.create("put some extra entropy here")
 	myPrivateKey = myAccount.privateKey
@@ -45,7 +44,6 @@ def postJSONRPCRequestObject(_HTTPEnpoint, _jsonRPCRequestObject):
     response = session.post(_HTTPEnpoint,
                             json=_jsonRPCRequestObject,
                             headers={'Content-type': 'application/json'})
-
     return response.json()
 	
 def get_you_nonce(requestId):
